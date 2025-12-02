@@ -33,6 +33,11 @@ body {
   to { opacity: 1; transform: translateX(0); }
 }
 
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(255,102,179,0.6); }
+  50% { box-shadow: 0 0 25px rgba(255,102,179,0.9); }
+}
+
 /* ==========================
    NAVBAR
 ========================== */
@@ -150,9 +155,7 @@ nav a:hover {
   font-size: 1.1rem;
   color: #dcd6f7;
 }
-/* ==========================
-   SKILLS
-========================== */
+
 /* ==========================
    SKILLS
 ========================== */
@@ -170,10 +173,9 @@ nav a:hover {
   margin-bottom: 2rem;
 }
 
-/* FIXED 3 CARDS PER ROW */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);   /* 🔥 Only 3 cards per row */
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   max-width: 900px;
   margin: auto;
@@ -206,20 +208,6 @@ nav a:hover {
   font-weight: 600;
   color: #ffd6f0;
 }
-
-/* Responsive */
-@media (max-width: 900px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);    /* Tablet → 2 cards */
-  }
-}
-
-@media (max-width: 600px) {
-  .skills-grid {
-    grid-template-columns: 1fr;               /* Mobile → 1 card */
-  }
-}
-
 
 /* ==========================
    PROJECTS
@@ -269,7 +257,7 @@ nav a:hover {
 }
 
 /* ==========================
-   RESUME
+   RESUME - VIEW MY CV
 ========================== */
 #resume {
   padding: 6rem 2rem;
@@ -278,19 +266,43 @@ nav a:hover {
   border-radius: 12px;
 }
 
+/* --- View My CV Button Styling --- */
 #resume a {
-  padding: 0.6rem 1.5rem;
+  padding: 0.8rem 2rem;
   background: linear-gradient(135deg, #ff66b3, #7b2ff7);
   color: white;
   border-radius: 50px;
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: all 0.35s cubic-bezier(.25,.8,.25,1);
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  animation: pulseGlow 2.5s infinite;
+}
+
+#resume a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  transform: skewX(-20deg);
+  transition: all 0.5s ease;
+}
+
+#resume a:hover::before {
+  left: 200%;
 }
 
 #resume a:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px) scale(1.05);
   background: linear-gradient(135deg, #a52cff, #ff33aa);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
 }
 
 /* ==========================
@@ -405,10 +417,16 @@ footer {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
   .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-grid {
     grid-template-columns: 1fr;
   }
   

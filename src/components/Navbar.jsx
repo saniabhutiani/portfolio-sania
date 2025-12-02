@@ -1,5 +1,4 @@
 import React from "react";
-import resume from "../assets/resume.pdf"; // <-- your resume path
 
 const Navbar = () => {
   return (
@@ -7,18 +6,22 @@ const Navbar = () => {
       <h1 className="text-xl font-bold cursor-pointer hover:tracking-wide transition-all duration-300">
         Sania Bhutiani
       </h1>
+
       <nav className="flex items-center">
         <a href="#hero" className="mx-2 hover:text-pink-300 transition-colors duration-300">Home</a>
         <a href="#about" className="mx-2 hover:text-pink-300 transition-colors duration-300">About</a>
         <a href="#skills" className="mx-2 hover:text-pink-300 transition-colors duration-300">Skills</a>
         <a href="#projects" className="mx-2 hover:text-pink-300 transition-colors duration-300">Projects</a>
         <a href="#contact" className="mx-2 hover:text-pink-300 transition-colors duration-300">Contact</a>
-        <a 
-          href={resume} 
-          download="Sania_Bhutiani_CV.pdf"
-          className="ml-4 px-4 py-2 bg-pink-600 hover:bg-pink-500 text-white font-bold rounded-full transition-all duration-300"
+
+        {/* Correct View CV Button */}
+        <a
+          href="https://drive.google.com/uc?export=download&id=1QY-bp9Nnq3S-PVO3iNuLzYOvfl-EU49J"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="view-cv-btn ml-4"
         >
-          Download CV
+          View My CV
         </a>
       </nav>
     </header>
