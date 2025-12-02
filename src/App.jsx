@@ -8,7 +8,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
-import ResumeButton from "./components/Resumebutton";
+import ResumeButton from "./components/ResumeButton";
 
 function App() {
   return (
@@ -19,10 +19,10 @@ function App() {
       <Skills />
       <Projects /> 
      <ResumeButton/>
-     {/* changed here */}
       <Contact />
       <Footer />
       <Card />
+      
     </div>
   );
 }
