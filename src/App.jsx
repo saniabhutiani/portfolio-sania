@@ -8,7 +8,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
-import ResumeButton from "./components/ResumeButton";
+
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <About />
       <Skills />
       <Projects /> 
-     <ResumeButton/>
+   
       <Contact />
       <Footer />
       <Card />
