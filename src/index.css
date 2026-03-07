@@ -41,27 +41,6 @@ header nav a {
 header nav a:hover {
   color: #ff5fcd;
 }
-
-/* ==========================
-   VIEW CV BUTTON STYLING
-========================== */
-.view-cv-btn {
-  padding: 0.6rem 1.3rem;
-  background: linear-gradient(45deg, #ff009d, #ff5fcd);
-  color: white;
-  border-radius: 30px;
-  border: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.view-cv-btn:hover {
-  transform: scale(1.07);
-  background: linear-gradient(45deg, #ff5fcd, #ff009d);
-}
-
 /* ==========================
    SECTIONS
 ========================== */
