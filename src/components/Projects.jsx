@@ -36,7 +36,7 @@ const Projects = () => {
           <Card
             img={project4}
             title="News App Using React"
-            link="http://localhost:5174"
+            link="http://localhosthttp://localhost:5174/:5174/"
           />
 
           <Card
