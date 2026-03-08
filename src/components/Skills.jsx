@@ -18,12 +18,11 @@ const skills = [
   { name: "Canva", logo: canvaLogo },
   { name: "Basic Video Editing", logo: videoLogo }
 ];
-
 const Skills = () => {
   return (
     <section id="skills">
 
-         <div cla="container">
+         <div class="container">
       <h2>My Skills</h2>
 
       <div className="skills-grid">
