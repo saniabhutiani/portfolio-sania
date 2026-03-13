@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-
 import htmlLogo from "../assets/logos/html.png";
 import cssLogo from "../assets/logos/css.png";
 import jsLogo from "../assets/logos/js.png";
@@ -82,7 +81,7 @@ const skillData = {
     level: "Intermediate"
   },
 
-  tailwind: {
+  tailwind : {
     title: "Tailwind CSS",
     logo: tailwindLogo,
     desc: "Utility-first CSS framework for modern UI design.",
