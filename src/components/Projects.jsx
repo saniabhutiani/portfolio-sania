@@ -17,6 +17,7 @@ const Projects = () => {
 
           <Card
             img={project1}
+            
             title="HTML, CSS Portfolio Website"
             link="http://127.0.0.1:60658/portfoliopractice.html"
           />

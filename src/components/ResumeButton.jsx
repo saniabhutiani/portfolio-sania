@@ -3,7 +3,7 @@ import React from "react";
 const ResumeButton = () => {
   return (
     <a
-      href="https://drive.google.com/file/d/1T-_d8EGjUJQo_nzhywZj_hnzO5tKJAZl/view?usp=sharing"
+      href="https://docs.google.com/presentation/d/1dUtHCp0OUNcYvuDmuj5kpkGU2-eMw1-3/edit?usp=drive_link&ouid=108661872170461277567&rtpof=true&sd=true"
       target="_blank"
       rel="noopener noreferrer"
       className="view-cv-btn"
