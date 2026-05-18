@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import htmlLogo from "../assets/logos/html.png";
 import cssLogo from "../assets/logos/css.png";
@@ -143,7 +143,9 @@ const SkillDetail = () => {
   const { name } = useParams();
 
   const skill = skillData[name];
-
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, [name]);
   if (!skill) {
     return <h2 style={{color:"white",padding:"100px"}}>Skill not found</h2>;
   }
@@ -195,12 +197,14 @@ const SkillDetail = () => {
           <h3>Projects</h3>
           <p>{skill.projects}</p>
         </div>
+
        <div className="info-card">
          <h3>Tools & Technologies</h3>
          <p>
         I regularly use modern development tools to build structured
         and maintainable websites.
         </p>
+
         <ul>
         <li>VS Code for development</li>
         <li>Git & GitHub for version control</li>
@@ -208,32 +212,41 @@ const SkillDetail = () => {
         <li>Responsive design testing tools</li>
        </ul> 
    </div> 
+
          <div className="info-card">
          <h3>Learning & Growth</h3>
+
         <p> 
         I continuously improve my HTML skills by exploring modern
         web standards and accessibility practices.
         </p>
+
        <ul>
        <li>Learning advanced semantic HTML</li>
        <li>Improving accessibility (ARIA)</li>
        <li>Optimizing SEO structure</li>
-        <li>Building scalable UI layouts</li>
+       <li>Building scalable UI layouts</li>
      </ul>
+
 </div>
       </div>
 
       {/* NAVIGATION */}
+
       <div className="nav-buttons">
+
         <Link to="/#skills" className="back-btn">
           ← Back
         </Link>
+
         {nextSkill && (
           <Link to={`/skills/${nextSkill}`} className="next-btn">
             Next → {skillData[nextSkill].title}
           </Link>
         )}
+
       </div>
+
     </section>
   );
 };
